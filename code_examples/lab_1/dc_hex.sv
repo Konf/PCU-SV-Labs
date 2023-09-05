@@ -1,4 +1,4 @@
-always @(*) begin
+always_comb begin
   case (mux_result)
       4'h0: HEX0 = 7'b1000000;
       4'h1: HEX0 = 7'b1111001;
@@ -17,7 +17,7 @@ always @(*) begin
       4'hC:
       4'hD:
       4'hE:
-      4'hF:     
+      4'hF:
       /*
   endcase
 end
