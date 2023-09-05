@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{setspace}
+
+% Использовать Times New Roman
+\usepackage{tempora}
+\usepackage{newtxmath}
+
+
+
+\usepackage{graphicx}
+\usepackage[english,russian]{babel}
+\usepackage{float}
+
+\usepackage{fancybox,fancyhdr}
+
+\usepackage{geometry} 
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+% Добавить абзац на первую строку главы
+\usepackage{indentfirst}
+
+\sloppy
+
+
+\usepackage[table]{xcolor}
+
+
+ 
+
+\usepackage{longtable}
+
+
+\usepackage[hidelinks]{hyperref}
+
+
+\usepackage[newfloat]{minted}
+
+\setminted{breaklines=true, 
+           frame=lines, 
+           framesep=2mm,
+           linenos=true
+           }
+
+
+\usepackage{caption}
+\captionsetup{font=small}
+
+
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Листинг кода}
+
+\usepackage{xcolor}
+
+
+\addto\captionsrussian{\renewcommand{\chaptername}{Лабораторная работа}}
+
+
+
+\usepackage{xstring}
+\usepackage{catchfile}
+
+% \CatchFileDef{\headfull}{.git/HEAD}{}
+% \StrGobbleRight{\headfull}{1}[\head]
+% \StrBehind[2]{\head}{/}[\branch]
+% \CatchFileDef{\commit}{.git/refs/heads/\branch}{}
+% \StrGobbleRight{\commit}{33}[\commitshort]
+
+
+
+\newcommand{\doctitle}{Проектирование цифровых устройств в SystemVerilog}
+\newcommand{\docsubtitle}{Лабораторный практикум}
+\newcommand{\docauthors}{Ливенцев Е. \\ Примаков Е. \\ Рыжкова Д.}
+
+
+% Колонтитулы
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{МИЭТ \the\year}
+
+\lhead{\doctitle}
+
+\cfoot{\thepage}
+
+
+% PCU compatibility
+\newcommand{\nsig}[1]{$\overline{\mbox{#1}}$}
+\newcommand*\xor{\mathbin{\oplus}}
+\newcommand{\quotes}[1]{«#1»}
+\newcommand{\eng}[1]{\foreignlanguage{english}{#1}}
+\newcommand{\qeng}[1]{\quotes{\eng{#1}}}
+\newcommand{\kword}[1]{\eng{\textbf{#1}}}
+
+\usepackage{listings}
+\usepackage{svg}
+\usepackage{bm}
