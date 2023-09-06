@@ -5,3 +5,5 @@
 *.toc
 svg-inkscape/*
 .DS_Store
+.vscode/*
+_minted-main/*
