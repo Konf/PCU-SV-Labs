@@ -109,3 +109,16 @@
 \tikzset{timing/Z/.style={black}}
 \usetikztiminglibrary[arrow tip=latex, rising arrows]{clockarrows}
 \usetikztiminglibrary{nicetabs}
+
+%Patch for Tikz
+\makeatletter
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname pgfutil@addpdfresource@extgs\endcsname\relax
+\else
+  \AtBeginDocument{ \pgfutil@addpdfresource@extgs{ \TRP@list } }  
+  \let\TRP@addresource\relax
+\fi
+\makeatother
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
